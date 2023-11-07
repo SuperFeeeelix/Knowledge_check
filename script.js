@@ -1,4 +1,4 @@
-const question = [
+const questions = [
 {
     question: " What tag defines the body of the HTML document, and usually includes all the contents such as the text, hyperlinks, images, tables, lists, and more?",
     answers: [
@@ -52,39 +52,37 @@ const question = [
 }
 ];
 
-const questionEl = document.getElementById("question");
-const answerButton = document.getElementById("answer-buttons");
-const nextButton= document.getElementById("next-btn");
+let questionEl = document.getElementById("question");
+const answerButtons = document.getElementById("answer-buttons");
+const nextButton = document.getElementById("next-btn");
 
 let currentQuestionIndex = 0;
 let score = 0;
 
-function startQuiz(){
+function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
     nextButton.indexHTML = "Next";
     showQuestion();
 }
 
-//
+
+
+
 function showQuestion(){
-    let currentQuestion = question[currentQuestionIndex];
+    let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
     questionEl.innerHTML = questionNo + ". " + currentQuestion.question;
 
-    currentQuestion.answers.forEach(answers => {
+    currentQuestion.answers.forEach((answers) => {
         const button = document.createElement("button");
         button.innerHTML = answers.text;
         button.classList.add("btn");
-        button.addEventListener("click", () =>{
-            if (answers.correct) {
-                score ++;
-            }
-        })
-        answerButton.appendChild(button);
-    
-    })
+        answerButtons.appendChild(button);
+        
+    });
 }
 
 startQuiz();
+
 
