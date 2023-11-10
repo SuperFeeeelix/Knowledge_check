@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 { text: "<img>", correct: true},
                 { text: "<div>", correct: false},
                 { text: "<meta>", correct: false},
-            ]9
+            ]
         },
         {
             question: " What tag is used to define an interactive field where users can enter data?",
