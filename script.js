@@ -53,7 +53,7 @@ const questions = [
 ];
 
 let questionEl = document.getElementById("question");
-const answerButtons = document.getElementById("answer-buttons");
+const answerButtons = document.querySelector(".answer-buttons");
 const nextButton = document.getElementById("next-btn");
 
 let currentQuestionIndex = 0;
@@ -73,6 +73,8 @@ function showQuestion() {
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
     questionEl.innerHTML = questionNo + ". " + currentQuestion.question;
+
+    answerButtons.innerHtml = '. ';
 
     currentQuestion.answers.forEach((answers) => {
         const button = document.createElement("button");
