@@ -15,6 +15,7 @@ dbConnection.on('error', (error) => {
 
 dbConnection.once('open', async () => {
     console.log('Connected to the databse');
+    
 })
 // db error connection goesw here
 
