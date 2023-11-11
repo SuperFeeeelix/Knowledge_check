@@ -9,7 +9,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 
 // db connection code goes here
+dbConnection.on('error', (error) => {
+    console.error('Error connection to the databse:', error);
+});
 
+dbConnection.once('open', async () => {
+    console.log('Connected to the databse');
+})
 // db error connection goesw here
 
 //server listening goes here with midleware
