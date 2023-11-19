@@ -15,10 +15,10 @@ module.exports = async () => {
             if (collectionInfo.length) {
 
                 await collection.drop();
-                console.lof(`Collection ${collectionName} in databse ${databseName} dropped.`);
+                console.log(`Collection ${collectionName} in databse ${databseName} dropped.`);
 
             } else {
-                console.log(`Collection &{collectionName} in databse ${ddatabseName} not found.`);
+                console.log(`Collection ${collectionName} in databse ${databseName} not found.`);
 
             };
 
