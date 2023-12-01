@@ -17,7 +17,7 @@ dbConnection.once('open', async () => {
     console.log('Connected to the databse');
     
 })
-// db error connection goesw here
+// db error connection goes here
 
 //server listening goes here with midleware
 Server.start().then(() => {
